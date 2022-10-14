@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Формы и знакомство с бутстрап</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+
+<body>
+    <h1>Формы в HTML5</h1>
+
+    <form action="#" method="post" enctype="text/plain">
+        <fieldset>
+            <legend>Main info</legend>
+            <div class="form-group">
+                <label for="first_Name">Имя: </label>
+                <input type="text" id="first_Name" name="firstName" placeholder="Введите ваш имя" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Number: </label>
+                <input type="tel" id="phone" name="phone" placeholder="+7(999) 123-45-67" maxlength="11" required>
+            </div>
+
+            <div class="form-group">
+                <label for="pswd">Password: </label>
+                <input type="password" id="pswd" name="pswd" required>
+            </div>
+
+            <div class="form-group">
+                <label for="pswd">Hobby: </label>
+
+                <input type="checkbox" id="hobbi_f" name="hobbi" value="football" checked disabled>
+                <label for="hobbi_f">Football: </label>
+
+                <input type="checkbox" id="hobbi_g" name="hobbi" value="games">
+                <label for="hobbi_f">Games: </label>
+                <!--  
+                <input type="checkbox" id="hobbi_f" name="hobbi" value="football" checked disabled>
+                <label for="hobbi_f">Football: </label> -->
+            </div>
+
+            <div class="form-group">
+                <label>Sex: </label>
+
+                <input type="radio" id="sex_m" name="sex" value="m" checked>
+                <label for="sex_m">Male: </label>
+
+                <input type="radio" id="sex_f" name="sex" value="f">
+                <label for="sex_f">Female: </label>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Dop info</legend>
+            <div class="form-group">
+                <label for="country">Country: </label>
+
+                <select name="country" id="country">
+                    <option value="">Country</option>
+                    <optgroup label="SNG">
+                        <option value="ru">Russia</option>
+                        <option value="kz">Kazahstan</option>
+                        <option value="by">Belarussia</option>
+                    </optgroup>
+                    <optgroup label="EUR">
+                        <option value="it">Italy</option>
+                        <option value="gr">Greece</option>
+                    </optgroup>
+                </select>
+
+                <input list="editedCountry" name="editedCountry">
+                <datalist id="editedCountry">
+                    <option value="France"></option>
+                    <option value="Spain"></option>
+                    <option value="Belgium"></option>
+                </datalist>
+            </div>
+
+            <div class="form-group">
+                <label for="date">Month: </label>
+                <input type="month" id="date" name="date">
+            </div>
+            
+            <div class="form-group">
+                <label for="range">Polzun: </label>
+                <label>0</label>
+                <input type="range" id="range" name="range" min="0" max="100" step="10" value="20">
+                <label>100</label>
+                <!-- чтобы вывести значение ползунка - использовать output, js -->
+                <input type="number" id="num" name="num" min="0" max="100" step="25" value="0">
+                <input type="color" name="color" id="color" value="#f00000">
+            </div>
+
+
+            <button type="submit">Send it</button>
+
+
+        </fieldset>
+    </form>
+
+</body>
+
+
+</html>
